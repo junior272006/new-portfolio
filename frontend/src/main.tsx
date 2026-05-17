@@ -12,7 +12,7 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Terminal from "./components/Terminal";
 import Footer from "./components/Footer";
-
+import Experience from "./components/Experience";
 function App() {
   useEffect(() => {
     
@@ -32,6 +32,7 @@ function App() {
       <Projects />
       <Skills />
       <Education />
+      <Experience />
       <Contact />
       <Terminal />
       <Footer />

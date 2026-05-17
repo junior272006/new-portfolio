@@ -1,0 +1,126 @@
+
+
+.experience {
+  background: #000000;
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ── Header ── */
+.experience__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.experience__num {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 2px;
+}
+
+.experience__title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  letter-spacing: 2px;
+}
+
+/* ── Card ── */
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience__card {
+  border-left: 2px solid rgba(0, 255, 65, 0.2);
+  padding-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.experience__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.experience__role {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00ff41;
+  letter-spacing: 1px;
+  margin: 0 0 0.3rem;
+}
+
+.experience__company {
+  font-size: 0.85rem;
+  color: rgba(0, 255, 65, 0.5);
+}
+
+.experience__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.experience__location,
+.experience__period {
+  font-size: 0.78rem;
+  color: rgba(0, 255, 65, 0.4);
+}
+
+/* ── Description ── */
+.experience__desc {
+  font-size: 0.92rem;
+  color: rgba(0, 255, 65, 0.65);
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* ── Missions ── */
+.experience__missions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.experience__mission {
+  font-size: 0.88rem;
+  color: rgba(0, 255, 65, 0.6);
+  line-height: 1.7;
+}
+
+.experience__mission-arrow {
+  color: #00ff41;
+  margin-right: 0.5rem;
+}
+
+/* ── Techs ── */
+.experience__techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience__tech {
+  font-size: 0.75rem;
+  color: #00ff41;
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  padding: 0.2rem 0.6rem;
+  letter-spacing: 1px;
+}

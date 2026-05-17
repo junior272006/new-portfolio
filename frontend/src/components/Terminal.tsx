@@ -117,7 +117,7 @@ export default function Terminal() {
   return (
     <section id="terminal" className="terminal-section">
       <div className="terminal-section__header">
-        <span className="terminal-section__num">06 //</span>
+        <span className="terminal-section__num">07 //</span>
         <h2 className="terminal-section__title">Terminal</h2>
       </div>
 

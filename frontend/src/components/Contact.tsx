@@ -38,7 +38,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact__header">
-        <span className="contact__num">05 //</span>
+        <span className="contact__num">06 //</span>
         <h2 className="contact__title">Contact</h2>
       </div>
 
