@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="about">
       <div className="about__header">
         <span className="about__num">01 //</span>
-        <h2 className="about__title">À propos</h2>
+        <h2 className="about__title">A propos de moi</h2>
       </div>
 
       <div className="about__content">
