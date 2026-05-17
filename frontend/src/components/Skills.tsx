@@ -1,69 +1,83 @@
+import { type ReactNode } from "react";
+import {
+  FaReact, FaPython, FaPhp, FaFigma, FaLayerGroup,
+  FaDatabase, FaServer, FaProjectDiagram,
+  FaNetworkWired, FaExchangeAlt, FaSitemap, FaWindows,
+  FaLinux, FaShieldAlt, FaLock,
+  FaGithub, FaCode,
+} from "react-icons/fa";
+import {
+  SiTypescript, SiMysql, SiWireshark,
+  SiPostman, SiPhpmyadmin, SiVsco,
+} from "react-icons/si";
+import { MdRouter } from "react-icons/md";
 import "../styles/Skills.css";
 
 interface SkillItem {
-  icon: string;
+  icon: ReactNode;
   label: string;
 }
 
 interface SkillCategory {
-  icon: string;
+  icon: ReactNode;
   title: string;
   skills: SkillItem[];
 }
 
 const categories: SkillCategory[] = [
   {
-    icon: "</>" ,
+    icon: <FaReact />,
     title: "Développement Web",
     skills: [
-      { icon: "⚛", label: "React / TypeScript" },
-      { icon: "🐍", label: "Python (scripts)" },
-      { icon: "🐘", label: "PHP (bases)" },
-      { icon: "🎨", label: "Figma (UI/UX)" },
-      { icon: "🔗", label: "Applications fullstack" },
+      { icon: <FaReact />,      label: "React" },
+      { icon: <SiTypescript />, label: "TypeScript" },
+      { icon: <FaPython />,     label: "Python (scripts)" },
+      { icon: <FaPhp />,        label: "PHP (bases)" },
+      { icon: <FaFigma />,      label: "Figma (UI/UX)" },
+      { icon: <FaLayerGroup />, label: "Applications fullstack" },
     ],
   },
   {
-    icon: "🗄",
+    icon: <FaDatabase />,
     title: "Bases de données",
     skills: [
-      { icon: "🐬", label: "MySQL" },
-      { icon: "🔶", label: "Oracle Database (notions)" },
-      { icon: "📐", label: "Modélisation BDD" },
-      { icon: "📋", label: "Requêtes SQL (CRUD)" },
+      { icon: <SiMysql />,         label: "MySQL" },
+      { icon: <FaDatabase />,        label: "Oracle Database (notions)" },
+      { icon: <FaProjectDiagram />,label: "Modélisation BDD" },
+      { icon: <FaDatabase />,      label: "Requêtes SQL (CRUD)" },
     ],
   },
   {
-    icon: "🌐",
+    icon: <FaNetworkWired />,
     title: "Réseaux & Systèmes",
     skills: [
-      { icon: "📡", label: "Cisco Packet Tracer" },
-      { icon: "🔀", label: "Routage & commutation" },
-      { icon: "🧱", label: "Modèle OSI / TCP-IP" },
-      { icon: "🔢", label: "Adressage IP & sous-réseaux" },
-      { icon: "🖥", label: "Windows Server 2019" },
+      { icon: <MdRouter />,         label: "Cisco Packet Tracer" },
+      { icon: <FaExchangeAlt />,    label: "Routage & commutation" },
+      { icon: <FaSitemap />,        label: "Modèle OSI / TCP-IP" },
+      { icon: <FaNetworkWired />,   label: "Adressage IP & sous-réseaux" },
+      { icon: <FaWindows />,        label: "Windows Server 2019" },
     ],
   },
   {
-    icon: "🔐",
+    icon: <FaShieldAlt />,
     title: "Cybersécurité",
     skills: [
-      { icon: "🐧", label: "Linux Kali & Ubuntu" },
-      { icon: "🌍", label: "OWASP Top 10 (bases)" },
-      { icon: "📡", label: "Wireshark (analyse trafic)" },
-      { icon: "🔍", label: "Nmap (découverte réseau)" },
-      { icon: "🔒", label: "Sécurité SSH / services" },
+      { icon: <FaLinux />,      label: "Linux Kali & Ubuntu" },
+      { icon: <FaShieldAlt />,  label: "OWASP Top 10 (bases)" },
+      { icon: <SiWireshark />,  label: "Wireshark (analyse trafic)" },
+      { icon: <FaServer />,     label: "Nmap (découverte réseau)" },
+      { icon: <FaLock />,       label: "Sécurité SSH / services" },
     ],
   },
   {
-    icon: "⚙",
+    icon: <FaCode />,
     title: "Outils",
     skills: [
-      { icon: "🐙", label: "Git / GitHub" },
-      { icon: "📝", label: "VS Code" },
-      { icon: "📮", label: "Postman" },
-      { icon: "🗃", label: "phpMyAdmin" },
-      { icon: "🔶", label: "Oracle SQL Developer" },
+      { icon: <FaGithub />,        label: "Git / GitHub" },
+      { icon: <SiVsco />, label: "VS Code" },
+      { icon: <SiPostman />,       label: "Postman" },
+      { icon: <SiPhpmyadmin />,    label: "phpMyAdmin" },
+      { icon: <FaDatabase />,        label: "Oracle SQL Developer" },
     ],
   },
 ];
@@ -78,14 +92,14 @@ export default function Skills() {
 
       <div className="skills__grid">
         {categories.map((cat) => (
-          <div key={cat.title} className="skill-card">
+          <div key={String(cat.title)} className="skill-card">
             <div className="skill-card__header">
               <span className="skill-card__cat-icon">{cat.icon}</span>
               <h3 className="skill-card__title">{cat.title}</h3>
             </div>
             <ul className="skill-card__list">
               {cat.skills.map((skill) => (
-                <li key={skill.label} className="skill-card__item">
+                <li key={String(skill.label)} className="skill-card__item">
                   <div className="skill-card__item-top">
                     <span className="skill-card__item-icon">{skill.icon}</span>
                     <span className="skill-card__item-label">{skill.label}</span>

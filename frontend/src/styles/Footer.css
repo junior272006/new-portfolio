@@ -1,0 +1,19 @@
+/* ── Footer.css ── */
+
+.footer {
+  background: #000000;
+  border-top: 1px solid rgba(0, 255, 65, 0.1);
+  padding: 1.8rem 2.5rem;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.footer__text {
+  font-size: 0.75rem;
+  color: rgba(0, 255, 65, 0.35);
+  letter-spacing: 1.5px;
+}
+
+.footer__tag {
+  color: rgba(0, 255, 65, 0.2);
+}

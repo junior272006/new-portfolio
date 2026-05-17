@@ -96,10 +96,8 @@
 }
 
 .skill-card__item-icon {
-  font-size: 0.85rem;
-  width: 20px;
-  text-align: center;
-  flex-shrink: 0;
+  font-size: 1rem;
+  color: #00ff41;
 }
 
 .skill-card__item-label {

@@ -1,0 +1,144 @@
+/* ── Terminal.css ── */
+
+.terminal-section {
+  background: #000000;
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ── Header ── */
+.terminal-section__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.terminal-section__num {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 2px;
+}
+
+.terminal-section__title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  letter-spacing: 2px;
+}
+
+/* ── Fenêtre terminal ── */
+.terminal-window {
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: text;
+}
+
+/* ── Barre titre ── */
+.terminal-window__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #0a1a0c;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+}
+
+.terminal-window__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.terminal-window__dot--red    { background: #ff5f57; }
+.terminal-window__dot--yellow { background: #ffbd2e; }
+.terminal-window__dot--green  { background: #28c840; }
+
+.terminal-window__bar-title {
+  font-size: 0.72rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+
+/* ── Corps ── */
+.terminal-window__body {
+  background: #020a03;
+  padding: 1.2rem 1.5rem;
+  min-height: 320px;
+  max-height: 460px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.terminal-window__body::-webkit-scrollbar {
+  width: 4px;
+}
+.terminal-window__body::-webkit-scrollbar-track { background: transparent; }
+.terminal-window__body::-webkit-scrollbar-thumb { background: rgba(0,255,65,0.2); border-radius: 2px; }
+
+/* ── Lignes ── */
+.terminal-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.terminal-line--output .terminal-line__text {
+  color: rgba(0, 255, 65, 0.7);
+}
+
+.terminal-line--error .terminal-line__text {
+  color: #ff4444;
+}
+
+.terminal-line--input .terminal-line__text {
+  color: #ffffff;
+}
+
+/* ── Prompt ── */
+.terminal-prompt {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+}
+
+.terminal-prompt__user   { color: #00ff41; }
+.terminal-prompt__sep    { color: rgba(0,255,65,0.4); }
+.terminal-prompt__path   { color: #4fc3f7; }
+.terminal-prompt__dollar { color: rgba(0,255,65,0.6); margin-left: 2px; }
+
+/* ── Input ── */
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.82rem;
+  flex: 1;
+  caret-color: #00ff41;
+  letter-spacing: 0.5px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .terminal-window__body {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
