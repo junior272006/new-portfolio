@@ -125,15 +125,15 @@ export default function Terminal() {
         className="terminal-window"
         onClick={() => inputRef.current?.focus()}
       >
-        {/* Barre titre */}
         <div className="terminal-window__bar">
           <span className="terminal-window__dot terminal-window__dot--red" />
           <span className="terminal-window__dot terminal-window__dot--yellow" />
           <span className="terminal-window__dot terminal-window__dot--green" />
-          <span className="terminal-window__bar-title">junior_nguetta@portfolio:~</span>
+          <span className="terminal-window__bar-title">
+            junior_nguetta@portfolio:~
+          </span>
         </div>
 
-        {/* Contenu */}
         <div className="terminal-window__body">
           {lines.map((line, i) => (
             <div key={i} className={`terminal-line terminal-line--${line.type}`}>
@@ -149,7 +149,6 @@ export default function Terminal() {
             </div>
           ))}
 
-          {/* Ligne de saisie */}
           <div className="terminal-line terminal-line--input">
             <span className="terminal-prompt">
               <span className="terminal-prompt__user">junior@portfolio</span>
@@ -157,6 +156,7 @@ export default function Terminal() {
               <span className="terminal-prompt__path">~</span>
               <span className="terminal-prompt__dollar">$</span>
             </span>
+
             <input
               ref={inputRef}
               className="terminal-input"
@@ -165,7 +165,6 @@ export default function Terminal() {
               onKeyDown={handleKeyDown}
               autoComplete="off"
               spellCheck={false}
-              autoFocus
             />
           </div>
 

@@ -27,7 +27,7 @@ export default function Hero() {
 
       {/* Boutons */}
       <div className="hero__btns">
-        <a href="#skills" className="hero__btn hero__btn--primary">
+        <a href="#projects" className="hero__btn hero__btn--primary">
           &lt;/&gt; Voir mes projets
         </a>
         <a href="/cv.pdf" download className="hero__btn hero__btn--outline">

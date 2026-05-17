@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../styles/Navbar.css";
 
 const navLinks = [
@@ -12,26 +12,12 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>("");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 40);
+  };
 
-      // Active section detection
-      const sections = navLinks.map((l) => l.href.replace("#", ""));
-      for (const id of sections.reverse()) {
-        const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 100) {
-          setActiveSection(id);
-          break;
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll);
 
   const handleLinkClick = (href: string) => {
     setMenuOpen(false);
@@ -41,8 +27,13 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
+      
       {/* Logo */}
-      <a className="navbar__logo" href="#hero" onClick={() => handleLinkClick("#hero")}>
+      <a
+        className="navbar__logo"
+        href="#hero"
+        onClick={() => handleLinkClick("#hero")}
+      >
         <span className="navbar__logo-bracket">[</span>
         <span className="navbar__logo-path">~/</span>
         <span className="navbar__logo-name">junior_nguetta</span>
@@ -56,8 +47,11 @@ export default function Navbar() {
           <li key={href}>
             <a
               href={href}
-              className={`navbar__link ${activeSection === href.replace("#", "") ? "navbar__link--active" : ""}`}
-              onClick={(e) => { e.preventDefault(); handleLinkClick(href); }}
+              className="navbar__link"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick(href);
+              }}
             >
               <span className="navbar__link-prefix">./</span>
               {label}
@@ -66,13 +60,13 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* Status badge */}
+      {/* Status */}
       <div className="navbar__status">
         <span className="navbar__status-dot" />
         <span>disponible</span>
       </div>
 
-      {/* Burger mobile */}
+      {/* Burger */}
       <button
         className={`navbar__burger ${menuOpen ? "navbar__burger--open" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -81,19 +75,23 @@ export default function Navbar() {
         <span /><span /><span />
       </button>
 
-      {/* Mobile menu */}
+      {/* Mobile */}
       <div className={`navbar__mobile ${menuOpen ? "navbar__mobile--open" : ""}`}>
         {navLinks.map(({ label, href }) => (
           <a
             key={href}
             href={href}
             className="navbar__mobile-link"
-            onClick={(e) => { e.preventDefault(); handleLinkClick(href); }}
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick(href);
+            }}
           >
-            <span className="navbar__mobile-prefix">$ cd </span>{label}
+            <span className="navbar__mobile-prefix">$ cd </span>
+            {label}
           </a>
         ))}
       </div>
     </nav>
   );
-};
+}
