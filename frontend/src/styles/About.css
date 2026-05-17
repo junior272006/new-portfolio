@@ -1,0 +1,47 @@
+/* ── About.css ── */
+
+.about {
+  background: #000000;
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ── Header ── */
+.about__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.about__num {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 2px;
+}
+
+.about__title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  letter-spacing: 2px;
+}
+
+/* ── Texte ── */
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  border-left: 2px solid rgba(0, 255, 65, 0.2);
+  padding-left: 1.8rem;
+}
+
+.about__text {
+  font-size: 0.92rem;
+  color: rgba(0, 255, 65, 0.65);
+  line-height: 1.9;
+}
