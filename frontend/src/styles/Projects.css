@@ -1,0 +1,142 @@
+/* ── Projects.css ── */
+
+.projects {
+  background: #000000;
+  padding: 6rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ── Header ── */
+.projects__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.projects__num {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 2px;
+}
+
+.projects__title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  letter-spacing: 2px;
+}
+
+/* ── Grid ── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Card ── */
+.project-card {
+  background: #040d06;
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.project-card:hover {
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.07);
+}
+
+/* ── Top ── */
+.project-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card__badge {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: rgba(0, 255, 65, 0.5);
+}
+
+.project-card__status {
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+}
+
+.project-card__status--wip  { color: rgba(255, 200, 0, 0.7); }
+.project-card__status--done { color: rgba(0, 255, 65, 0.7); }
+
+/* ── Titre ── */
+.project-card__title {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+/* ── Description ── */
+.project-card__desc {
+  font-size: 0.82rem;
+  color: rgba(0, 255, 65, 0.55);
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* ── Tags ── */
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-card__tag {
+  font-size: 0.68rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  color: rgba(0, 255, 65, 0.5);
+  letter-spacing: 1px;
+}
+
+/* ── Liens ── */
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 255, 65, 0.08);
+}
+
+.project-card__link {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: #00ff41;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.project-card__link:hover {
+  opacity: 0.7;
+}
+
+.project-card__link--download {
+  color: rgba(255, 200, 0, 0.8);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}

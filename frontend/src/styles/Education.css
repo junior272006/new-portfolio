@@ -1,0 +1,181 @@
+/* ── Education.css ── */
+
+.education {
+  background: #000000;
+  padding: 6rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ── Header ── */
+.education__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.education__num {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 2px;
+}
+
+.education__title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  letter-spacing: 2px;
+}
+
+/* ── Timeline ── */
+.education__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Card ── */
+.edu-card {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ── Ligne verticale ── */
+.edu-card__line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.edu-card__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00ff41;
+  box-shadow: 0 0 8px rgba(0, 255, 65, 0.6);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.edu-card__connector {
+  width: 1px;
+  flex: 1;
+  background: rgba(0, 255, 65, 0.2);
+  margin: 6px 0;
+  min-height: 40px;
+}
+
+/* ── Body ── */
+.edu-card__body {
+  background: #040d06;
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 6px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: border-color 0.25s;
+}
+
+.edu-card__body:hover {
+  border-color: rgba(0, 255, 65, 0.3);
+}
+
+/* ── Top ── */
+.edu-card__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.edu-card__icon {
+  font-size: 0.75rem;
+  color: #00ff41;
+  background: rgba(0, 255, 65, 0.08);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  padding: 0.3rem 0.5rem;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.edu-card__degree {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.edu-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+}
+
+.edu-card__school {
+  color: #00ff41;
+  letter-spacing: 1px;
+}
+
+.edu-card__sep {
+  color: rgba(0, 255, 65, 0.25);
+}
+
+.edu-card__location {
+  color: rgba(0, 255, 65, 0.45);
+}
+
+.edu-card__period {
+  color: rgba(0, 255, 65, 0.45);
+}
+
+/* ── Description ── */
+.edu-card__desc {
+  font-size: 0.82rem;
+  color: rgba(0, 255, 65, 0.6);
+  line-height: 1.8;
+}
+
+/* ── Skills ── */
+.edu-card__skills {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-left: 2px solid rgba(0, 255, 65, 0.15);
+  padding-left: 1rem;
+}
+
+.edu-card__skill {
+  font-size: 0.78rem;
+  color: rgba(0, 255, 65, 0.55);
+}
+
+.edu-card__bullet {
+  color: #00ff41;
+  margin-right: 0.3rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .edu-card__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .edu-card__sep { display: none; }
+}

@@ -1,0 +1,138 @@
+/* ── Skills.css ── */
+
+.skills {
+  background: #000000;
+  padding: 6rem 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ── Header ── */
+.skills__header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.skills__num {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.4);
+  letter-spacing: 2px;
+}
+
+.skills__title {
+  font-family: 'Orbitron', monospace;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #00ff41;
+  text-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  letter-spacing: 2px;
+}
+
+/* ── Grid ── */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Card ── */
+.skill-card {
+  background: #040d06;
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 8px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.skill-card:hover {
+  border-color: rgba(0, 255, 65, 0.35);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
+}
+
+/* ── Card header ── */
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skill-card__cat-icon {
+  font-size: 1rem;
+}
+
+.skill-card__title {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #00ff41;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ── Liste ── */
+.skill-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.skill-card__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.skill-card__item-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skill-card__item-icon {
+  font-size: 0.85rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.skill-card__item-label {
+  font-size: 0.8rem;
+  color: rgba(0, 255, 65, 0.75);
+  letter-spacing: 0.5px;
+}
+
+/* ── Barre ── */
+.skill-card__bar {
+  height: 2px;
+  background: rgba(0, 255, 65, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-left: 26px;
+}
+
+.skill-card__bar-fill {
+  height: 100%;
+  width: 60%;
+  background: #00ff41;
+  box-shadow: 0 0 6px rgba(0, 255, 65, 0.5);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
